@@ -112,19 +112,59 @@ $hotels = [
                     <div class="description">
                         <div class="content">
                             <p class="title">ROOM TYPES</p>
-                            <p><?php echo $value['rooms'][$i]['room_name']; ?></p>
+                            <p><?php 
+                                    $room_name = $value['rooms'][$i]['room_name']; 
+                                    if($room_name > 0)
+                                    {
+                                        echo $room_name;
+                                    }
+                                    else
+                                    {
+                                        echo "Name not found";
+                                    }
+                                ?></p>
                         </div>
                         <div class="content">
                             <p class="title">BEDS</p>
-                            <p><?php echo $value['rooms'][$i]['bed']; ?></p>
+                            <p><?php 
+                                    $bed = $value['rooms'][$i]['bed']; 
+                                    if($bed > 0)
+                                    {
+                                        echo $bed;
+                                    }
+                                    else
+                                    {
+                                        echo "No bed found";
+                                    }
+                                ?></p>
                         </div>
                         <div class="content">
                             <p class="title">BOARD</p>
-                            <p><?php echo $value['rooms'][$i]['boards']['board_id']; ?></p>
+                            <p><?php
+                                    $board_id = $value['rooms'][$i]['boards']['board_id']; 
+                                    if($board_id > 0)
+                                    {
+                                        echo $board_id;
+                                    }
+                                    else
+                                    {
+                                        echo "No id found";
+                                    }
+                                ?></p>
                         </div>
                         <div class="content">
                             <p class="title">PRICE</p>
-                            <p><?php echo $value['rooms'][$i]['boards']['price']; ?></p>
+                            <p><?php 
+                                    $price = $value['rooms'][$i]['boards']['price']; 
+                                    if($price > 0)
+                                    {
+                                        echo $price;
+                                    }
+                                    else
+                                    {
+                                        echo "No price found";
+                                    }
+                                ?></p>
                         </div>
                     </div>
                 </div>
